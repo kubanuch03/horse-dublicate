@@ -1,0 +1,36 @@
+{% load static %}
+
+
+  <div class="container">
+    <!-- <img src="{% static 'images/logo.jpg' %}" alt="AITIM TRADING"> -->
+
+    <div class="content">
+      <h1>Приветствуем вас, будущих трейдеров!</h1>
+      <p>Мы рады приветствовать вас на нашем сайте желаем вам хорошего отдыха!</p>
+
+      
+
+      <p class="closing">Ваши данные:</p>
+
+      <div class="confirmation_link">
+        <a href="{{protocol}}://{{domain}}{{confirmation_link}}"
+          style="text-decoration: none; background-color: #007bff; color: #fff; padding: 10px 20px; border-radius: 5px; display: inline-block;">Подтвердить
+          почту</a>
+      </div>
+
+      <div class="credentials">
+        <h2>Ваши данные:</h2>
+        <p><strong>Почта:</strong> {{client_email}}</p>
+        <p><strong>Пароль:</strong> {{client_password}}</p>
+      </div>
+
+      <p class="closing"><strong>С уважением,<br>Horse And Travel</strong></p>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
