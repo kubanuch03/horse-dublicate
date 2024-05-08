@@ -12,9 +12,9 @@ services:
       - media_volume:/usr/src/app/media
     # environment:
     #   - DJANGO_SETTINGS_MODULE=config.settings.base
-    environment:
-      - VIRTUAL_HOST=back.horse-travel.com
-      - LETSENCRYPT_HOST=back.horse-travel.com
+    # environment:
+    #   - VIRTUAL_HOST=back.horse-travel.com
+    #   - LETSENCRYPT_HOST=back.horse-travel.com
       
     ports:
       - 8000:8000
@@ -33,7 +33,7 @@ services:
   nginx:
     image: jwilder/nginx-proxy:1.2
     ports:
-    - "80:80"
+    - "81:81"
     - "443:443"
     volumes:
     - ./nginx/default.conf:/etc/nginx/vhost.d/nginx.conf
@@ -44,14 +44,14 @@ services:
     - vhost:/etc/nginx/vhost.d
     - certs:/etc/nginx/certs
 
-  acme_companion:
-    image: nginxproxy/acme-companion:2.2.10
-    container_name: acme_companion
-    volumes_from:
-    - nginx
-    volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
-    - acme:/etc/acme.sh
+  # acme_companion:
+  #   image: nginxproxy/acme-companion:2.2.10
+  #   container_name: acme_companion
+  #   volumes_from:
+  #   - nginx
+  #   volumes:
+  #   - /var/run/docker.sock:/var/run/docker.sock
+  #   - acme:/etc/acme.sh
 
 volumes:
   db_data:
