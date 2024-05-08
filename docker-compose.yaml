@@ -11,12 +11,12 @@ services:
       - static_volume:/usr/src/app/static
       - media_volume:/usr/src/app/media
     
-    environment:
-      - VIRTUAL_HOST=backk.horse-travel.com
-      - LETSENCRYPT_HOST=backk.horse-travel.com
+    # environment:
+    #   - VIRTUAL_HOST=backk.horse-travel.com
+    #   - LETSENCRYPT_HOST=backk.horse-travel.com
       
-    ports:
-      - 8000:8000
+    # ports:
+    #   - 8000:8000
     depends_on:
       - db
   

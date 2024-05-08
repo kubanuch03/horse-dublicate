@@ -215,5 +215,5 @@ SIMPLE_JWT = {
     "UPDATE_LAST_LOGIN": True,
 }
 
-CSRF_USE_SESSIONS = True
-CSRF_TRUSTED_ORIGINS = ["https://backk.horse-travel.com"]
+# CSRF_USE_SESSIONS = True
+# CSRF_TRUSTED_ORIGINS = ["https://backk.horse-travel.com"]
