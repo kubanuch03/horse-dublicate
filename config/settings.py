@@ -216,4 +216,4 @@ SIMPLE_JWT = {
 }
 
 CSRF_USE_SESSIONS = True
-CSRF_TRUSTED_ORIGINS = ["https://back.horse-travel.com"]
+CSRF_TRUSTED_ORIGINS = ["https://backk.horse-travel.com"]
